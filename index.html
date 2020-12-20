@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Complete Trie</title>
+</head>
+<body>
+    <h1>Enter Prefix</h1>
+    <div class="main-container">
+        <input type="text" id="input">
+        <button id="search" onclick="search()">Search</button>
+        <div class="result">
+        </div>
+    </div>
+
+    <script id="suggest-template" type="text/x-handlebars-template">
+            {{#each resArr}}
+            <p>{{this}}</p>
+            {{/each}}
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="render.js"></script>
+    <script src="AutoCompleteTrie.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
